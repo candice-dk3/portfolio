@@ -43,11 +43,11 @@ nav {
   background-color: #1A0129;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 nav a {
   font-size: 1.2rem;
   color: white;
   text-decoration: none;
+  margin-left: 2rem;
 }
 
 nav a.router-link-exact-active {
@@ -107,6 +107,7 @@ nav a.router-link-exact-active {
     padding: 0.5rem 0;
     font-size: 1.2rem;
     text-align: center;
+    margin-left: 0rem;
   }
   .homeLogo {
     margin-right: 2rem;
