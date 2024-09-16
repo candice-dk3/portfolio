@@ -1,75 +1,150 @@
 <template>
-   <nav>
+  <nav>
     <div class="f-sec">
-        <router-link to="/" class="homeLogo">CK</router-link>
+      <router-link to="/" class="homeLogo"><img :src="logo" alt=""></router-link>
+      <button class="hamburger" @click="toggleMenu">
+        <span>&#9776;</span>
+      </button>
     </div>
-    <div class="s-sec">
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
-        <router-link to="/project">Project</router-link>
-        <router-link to="/education">Education</router-link>
-        <router-link to="/contact">Contact</router-link>
+    <div :class="['s-sec', { 'mobile-menu': isMenuOpen }]">
+      <router-link to="/" @click="closeMenu">Home</router-link>
+      <router-link to="/about" @click="closeMenu">About</router-link>
+      <router-link to="/project" @click="closeMenu">Project</router-link>
+      <router-link to="/education" @click="closeMenu">Education</router-link>
+      <router-link to="/contact" @click="closeMenu">Contact</router-link>
     </div>
   </nav>
 </template>
 <script>
 export default {
-    name: 'Navbar',
-    data(){
-        return{
-            logo: 'https://github.com/candice-dk3/vueProjectImages/blob/main/CK.png?raw=true'
-        }
+  name: 'Navbar',
+  data() {
+    return {
+      logo: 'https://github.com/candice-dk3/portfolio-images/blob/main/CK.png?raw=true',
+      isMenuOpen: false,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+    },
+    closeMenu() {
+      this.isMenuOpen = false;
     }
-}
+  }
+};
 </script>
 <style scoped>
 nav {
-    display: grid;
-    grid-template-columns:repeat(2,1fr);
-    padding: 1rem;
-    background-color: #1A0129;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #1A0129;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 nav a {
-    font-size: 1.2rem;
-    color: white;
-    text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
 }
+
 nav a.router-link-exact-active {
   color: #FFD700;
-} 
-.f-sec{
-    text-align: start;
-} 
-.s-sec{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    text-align: end;
-} 
-/* .logo{
-    width: 6rem;
-    margin-top: -2rem;
-} */
-.homeLogo{
+}
+
+.f-sec {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.s-sec {
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.homeLogo {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .homeLogo {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .s-sec {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #1A0129;
+    width: 100%;
+    padding: 0rem;
+  }
+  .s-sec.mobile-menu {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .s-sec a {
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .homeLogo {
+    margin-right: 2rem;
+    padding: 0rem;
+    margin-top: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .homeLogo {
     font-size: 1rem;
-    font-weight: 100;
-    margin-left: 2rem;
-    /* padding: 8rem; */
-}
+  }
+  .hamburger {
+    display: block;
+  }
+  .s-sec {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #1A0129;
+    width: 100%;
+    padding: 1rem;
+  }
 
+  .s-sec.mobile-menu {
+    display: flex;
+  }
 
-@media screen and (max-width: 390px){
-nav {
-    grid-template-columns:repeat(1,1fr);
-}
-.s-sec{
-    grid-template-columns: repeat(1, 1fr);
-} 
-}
+  .s-sec a {
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    text-align: center;
+  }
 
-@media screen and (max-width: 768px){
-
-}
-
-@media screen and (max-width: 1024px){
+  .homeLogo {
+    margin-left: auto;
+  }
 }
 </style>

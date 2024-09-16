@@ -2,7 +2,7 @@
     <section class="inner-sec">
         <div class="hero-sec">
             <div class="image-sec">
-                <!-- <img :src="image" alt="My Picture" class="image"> -->
+                <img :src="image" alt="My Picture" class="image">
             </div>
             <div class="text-sec">
                 <h2>Candice Keet</h2>
@@ -15,7 +15,7 @@
 export default {
    data(){
     return{
-        // image: 'https://github.com/candice-dk3/vueProjectImages/blob/main/Home-Page.png?raw=true'
+        image: ''
     }
    } 
 }
@@ -23,8 +23,11 @@ export default {
 <style scoped>
 .inner-sec{
     background-image: url(https://github.com/candice-dk3/vueProjectImages/blob/main/Home-Page.png?raw=true);
-    height: 75vh;
-    /* width: 110%; */
+    height: 78vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0rem;
 }
 .image{
     width: 52rem;
