@@ -27,7 +27,7 @@ data(){
 <style scoped>
 .footer-wrapper {
     position: absolute;
-    bottom: 0;
+    bottom: 1;
     width: 100%;
     background-color: #1A0129;
 }
