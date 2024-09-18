@@ -28,6 +28,28 @@
           </div>
         </div>
       </div>
+      <div class="skills">
+            <div class="technical-skills">
+                <h2>Technical Skills</h2>
+                <div class="skill-sec">
+                    <div v-for="skill in $store.state.skills" :key="skill.id" class="skill">
+                        <div class="skill-card">
+                          <div class="imgUrl">
+                                <img :src="skill.image" alt="" class="skill-image"/>
+                            </div>
+                            <div class="skill-card-body">
+                                <h5 class="skill-card-title">{{ skill.name }}</h5>
+                                <p class="skill-card-p">{{ skill.level }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="soft-skills">
+                <h2>Soft Skills</h2>
+                <div class="soft-sec"></div>
+            </div>
+        </div>
     </section>
 </template>
 <script>
@@ -41,6 +63,9 @@ export default {
     getAbout() {
       return this.$store.state.about;
     },
+    getSkills() {
+            return this.$store.state.skills;
+    },
     getData() {
       return this.$store.dispatch("getData");
     },
@@ -53,7 +78,7 @@ export default {
 <style scoped>
 .inner-sec{
     background-image: url(https://github.com/candice-dk3/portfolio-images/blob/main/About-Page.png?raw=true);
-    height: 85vh;
+    height: auto;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -100,19 +125,56 @@ h2{
 }
 .body{
   margin-top: 2rem;
+  padding: 1rem;
+}
+.body h4{
+  margin-top: 1rem;
   padding: 2rem;
+  text-align: start;
+}
+.sub-headings h4{
+  margin-top: 0rem;
+  text-align: start;
+  margin-left: 3rem;
 }
 .heading, .body h4{
   font-weight: 300;
 }
-@media screen and (max-width: 768px){
-  .inner-sec{
-    background-image: url(https://github.com/candice-dk3/portfolio-images/blob/main/About-Page.png?raw=true);
-    height: auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.skill-sec {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+.skill {
+    margin: 5rem;
+    height: 14rem;
+}
+.imgUrl{
+    background-color: #ffd9002f;
+    border-radius: 50%;
+    border: #ffd900 0.1rem solid;
+    width: 10rem;
+    height: 10rem;
+}
+.skill-image{
+    width: 7.5rem;
+    height: 7.5rem;
+    margin: 1.5rem auto;
+    display: block;
+    filter: grayscale(100%);  
+    transition: filter 0.6s;
+}
+.skill-image:hover {
+  filter: none;
+}
+.skill-card-body {
+    background-color: #ffd9002f;
+    border-radius: 1rem;
+    width: 10rem;
+    height: 6rem;
+    margin-top: 2rem;   
+}
+@media screen and (max-width: 391px) {
 h2{
   font-size: 1.5rem;
   padding: 0.4rem;
@@ -120,6 +182,7 @@ h2{
 }
 .container{
   grid-template-columns: repeat(1, 1fr);
+  /* padding: 1rem; */
 }
 .details{
   height: 28rem;
@@ -157,32 +220,30 @@ h2{
   font-weight: 300;
 } 
 }
-@media screen and (max-width: 390px) {
-.inner-sec{
-  background-image: url(https://github.com/candice-dk3/portfolio-images/blob/main/About-Page.png?raw=true);
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+
+@media screen and (min-width: 391px) and (max-width: 768px){
+  .inner-sec{
+    background-image: url(https://github.com/candice-dk3/portfolio-images/blob/main/About-Page.png?raw=true);
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 h2{
   font-size: 1.5rem;
   padding: 0.4rem;
   margin-left: 5rem;
 }
-.container{
-  grid-template-columns: repeat(1, 1fr);
-  /* padding: 1rem; */
-}
 .details{
-  height: 26rem;
+  height: 34rem;
   width: 20rem;
-  margin-left: 2.3rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
 }
 .message{
-  height: 32rem;
-  width: 20rem;
-  margin-left: 2.3rem;
+  height: 34rem;
+  width: 22rem;
+  margin-left: 0rem;
   margin-top: 2rem;
 }
 .message h5{
@@ -196,11 +257,19 @@ h2{
   margin-top: -20rem;
   padding: 2rem;
 }
+.body h4{
+  margin-top: -1rem;
+  padding: 1rem;
+  text-align: start;
+}
 .sub-headings h4{
-  margin-top: 2rem;
+  margin-top: 1rem;
+  text-align: start;
+  margin-left: 3rem;
 }
 .heading, .body h4{
   font-weight: 300;
 } 
 }
+
 </style>

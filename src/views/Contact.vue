@@ -57,10 +57,11 @@ export default {
 <style scoped>
 .inner-sec{
     background-image: url(https://github.com/candice-dk3/portfolio-images/blob/main/Contact-Page.png?raw=true);
-    height: 80vh;
+    height: auto;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding: 2rem;
 }
 h1{
     color: white;
@@ -153,13 +154,9 @@ button:hover {
 .image:hover{
     transform: scale(1.2); 
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 391px){
 .inner-sec{
-    background-image: url(https://github.com/candice-dk3/portfolio-images/blob/main/Contact-Page.png?raw=true);
-    height: 90vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    padding: 0rem;
 }
 h1{
     font-size: 1.4rem;
@@ -196,6 +193,54 @@ button {
 .social-sec{
     padding: 0rem;
     margin-top: 3rem;
+}
+.social{
+    display: flex;
+    padding: 0.5rem;
+}
+.social h4{
+    font-size: 0.7rem;
+    margin-left: 1rem;
+}
+.image{
+    width: 2.5rem;
+}
+}
+
+@media screen and (max-width: 768px){
+    h1{
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+.contact{
+    width: 40rem;
+}
+.form-sec {
+    justify-self: start;
+}
+form{
+    height: 20rem;
+    padding: 1rem;
+}
+input{
+    height: 1.6rem;
+    width: 14rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+textarea{
+    width: 16rem;
+    height: 9rem;
+}
+.buttons {
+    padding: 1rem;
+}
+button {
+    width: 4rem;
+}
+.social-sec{
+    padding: 0rem;
+    margin-top: 6rem;
 }
 .social{
     display: flex;
