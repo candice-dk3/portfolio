@@ -50,6 +50,18 @@ html{
     scroll-behavior: smooth;
 }
 body::-webkit-scrollbar{
-  display: none;
+  /* display: none; */
+  /* background-color: black; */
+  width: 0.8rem;
+}
+body::-webkit-scrollbar-track {
+  background: #1A0129;
+}
+body::-webkit-scrollbar-thumb {
+  background: #ffd90052;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 </style>
