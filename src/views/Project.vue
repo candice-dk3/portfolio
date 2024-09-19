@@ -3,7 +3,7 @@
     <h1>Projects</h1>
     <div class="container">
         <div class="project-cards">
-              <Card v-for="project in $store.state.projects" :key="project.id" class="project-card">
+            <Card v-for="project in $store.state.projects" :key="project.id" class="project-card">
                 <template #cardHeader>
                   <div class="d-flex">
                     <img :src="project.image" :alt="project.name" loading="lazy" class="img-fluid">
@@ -12,14 +12,14 @@
                 </template>
                 <template #cardBody>
                   <a :href="project.github" target="_blank" class="GitHub">
-                    <img :src="imgUrlGithub" alt="" />
+                    <!-- <img :src="github" alt="" /> -->
                   </a>
                   <a :href="project.vercel" target="_blank" class="Vercel">
-                    <img :src="imgUrlVercel" alt="" />
+                    <!-- <img :src="imgUrlVercel" alt="" /> -->
                   </a>
                 </template>
-              </Card>
-            </div>       
+            </Card>
+        </div>       
     </div>
    </section>
 </template>
@@ -43,12 +43,13 @@ export default {
 }
 </script>
 <style scoped>
-    .inner-sec{
-        background-image: url(https://github.com/candice-dk3/portfolio-images/blob/main/Project%20Page.png?raw=true);
-        height: auto;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        padding: 2rem;
-    }
+.inner-sec{
+    background-image: url(https://github.com/candice-dk3/portfolio-images/blob/main/Project%20Page.png?raw=true);
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 2rem;
+}
+
 </style>
