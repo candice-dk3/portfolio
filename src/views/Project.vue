@@ -51,5 +51,21 @@ export default {
     background-size: cover;
     padding: 2rem;
 }
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+}
 
+.project-card {
+  width: 20rem;
+  margin: 10px;
+}
+
+.project-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 </style>
