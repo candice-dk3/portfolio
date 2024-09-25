@@ -61,7 +61,7 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 2rem;
+    padding: 2.82rem;
 }
 h1{
     color: white;
@@ -154,9 +154,9 @@ button:hover {
 .image:hover{
     transform: scale(1.2); 
 }
-@media screen and (max-width: 391px){
+@media screen and (max-width: 390px){
 .inner-sec{
-    padding: 0rem;
+    padding: 1rem;
 }
 h1{
     font-size: 1.4rem;
@@ -164,8 +164,8 @@ h1{
 }
 .contact{
     grid-template-columns: repeat(1, 1fr);
-    width: 16rem;
-    padding: 1.4rem;
+    width: 19rem;
+    padding: 1rem;
 }
 .form-sec {
     justify-self: start;
@@ -175,20 +175,22 @@ form{
     padding: 1rem;
 }
 input{
-    height: 1.6rem;
-    width: 12rem;
+    height: 2rem;
+    width: 17rem;
     margin-bottom: 1rem;
-    margin-left: 1rem;
+    margin-left: 0rem;
 }
 textarea{
-    width: 14rem;
-    height: 9rem;
+    width: 17rem;
+    height: 10rem;
 }
 .buttons {
     padding: 1rem;
+    margin-left: 2rem;
 }
 button {
     width: 4rem;
+    height: 2rem;
 }
 .social-sec{
     padding: 0rem;
@@ -207,10 +209,13 @@ button {
 }
 }
 
-@media screen and (max-width: 768px){
-    h1{
-    font-size: 1.4rem;
+@media screen and (min-width: 391px) and (max-width: 768px){
+.inner-sec{
     padding: 1rem;
+}
+h1{
+    font-size: 1.2rem;
+    padding: 0.4rem;
 }
 .contact{
     width: 40rem;

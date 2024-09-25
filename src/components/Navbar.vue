@@ -119,6 +119,7 @@ nav a.router-link-exact-active {
 @media screen and (max-width: 390px) {
   .homeLogo {
     font-size: 1rem;
+    margin-left: 0rem;
   }
   .hamburger {
     display: block;
@@ -133,19 +134,13 @@ nav a.router-link-exact-active {
     width: 100%;
     padding: 1rem;
   }
-
   .s-sec.mobile-menu {
     display: flex;
   }
-
   .s-sec a {
     padding: 0.5rem 0;
     font-size: 1.2rem;
     text-align: center;
-  }
-
-  .homeLogo {
-    margin-left: auto;
   }
 }
 </style>

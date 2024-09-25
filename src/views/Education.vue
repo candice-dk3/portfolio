@@ -1,5 +1,15 @@
 <template>
-    <section class="inner-sec">
+    <section class="inner-sec">  
+        <h2>Work Experience</h2>
+        <div class="workExpo-sec">
+            <div v-for="WorkExperience in $store.state.workExperience" :key="WorkExperience.id" class="education">
+                <div class="education-text">
+                    <h4 class="edu-year">{{ WorkExperience.year }}</h4>
+                    <h2>{{ WorkExperience.placeOfInstitution }}</h2>
+                    <p>{{ WorkExperience.description }}</p>
+                </div>
+            </div>
+        </div>
         <h2>Education</h2>
         <div class="education-sec">
             <div v-for="Education in $store.state.education" :key="Education.id" class="education">
@@ -16,7 +26,10 @@
 export default {
     methods: {
         getResume() {
-             return this.$store.state.resume;
+            return this.$store.state.resume;
+        },
+        getWorkExperience() {
+            return this.$store.state.workExperience;
         },
         getData() {
             return this.$store.dispatch("getData");
@@ -38,14 +51,14 @@ export default {
     padding: 1rem;
 }
 .education-text{
-    background-color: #ffd90066;
+    background-color: #ffd90046;
     width: 68rem;
     margin: 0 auto;
     margin-bottom: 5rem;
     border-radius: 2rem;
     padding: 1rem;
 }
-@media screen and (max-width: 391px){
+@media screen and (max-width: 390px){
 .education-text{
     background-color: #ffd90066;
     width: 20rem;

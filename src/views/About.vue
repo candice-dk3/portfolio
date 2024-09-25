@@ -1,29 +1,17 @@
 <template>
     <section class="inner-sec">
       <h2>Who is Candice?</h2>
-      <div class="container">
+      <div class="container" v-for="about in $store.state.about" :key="about.id">
         <div class="details">
-          <div class="sub-headings">
-              <h4>Full Name: </h4>
-              <br>
-              <h4>Date of Birth: </h4>
-              <br>
-              <h4>Email: </h4>
-              <br>
-              <h4>Address: </h4>
-          </div>
-            <div class="body" v-for="about in $store.state.about" :key="about.id">
-              <h4>{{ about.name }}</h4>
-              <br>
-              <h4>{{about.dOB}}</h4>
-              <br>
-              <h4>{{about.email}}</h4>
-              <br>
-              <h4>{{about.address}}</h4>
+            <div class="body" >
+              <h4>Full Name: <br>{{ about.name }}</h4>   
+              <h4>Date of Birth: <br>{{about.dOB}}</h4>
+              <h4>Email: <br>{{about.email}}</h4>
+              <h4>Address: <br>{{about.address}}</h4>
             </div>
         </div>
         <div class="message">
-          <div v-for="about in $store.state.about" :key="about.id">
+          <div>
             <h5>{{ about.message }}</h5>
           </div>
         </div>
@@ -47,7 +35,18 @@
             </div>
             <div class="soft-skills">
                 <h2>Soft Skills</h2>
-                <div class="soft-sec"></div>
+                <div class="soft-sec">
+                    <div v-for="softSkill in $store.state.softSkills" :key="softSkill.id" class="softSkill">
+                      <div class="skill-card">
+                          <div class="imgUrl">
+                                <img :src="softSkill.image" alt="" class="skill-image"/>
+                            </div>
+                            <div class="softSkill-card-body">
+                                <h5 class="skill-card-title">{{ softSkill.name }}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -64,7 +63,10 @@ export default {
       return this.$store.state.about;
     },
     getSkills() {
-            return this.$store.state.skills;
+      return this.$store.state.skills;
+    },
+    getSoftSkills(){
+      return this.$store.state.softSkills
     },
     getData() {
       return this.$store.dispatch("getData");
@@ -98,7 +100,7 @@ h2{
 }
 .details{
   background-color: #ffd90066;
-  height: 26rem;
+  height: 32rem;
   width: 25rem;
   margin-left: 10rem;
   border-radius: 3rem;
@@ -106,7 +108,7 @@ h2{
 }
 .message{
   background-color: #ffd90066;
-  height: 26rem;
+  height: 32rem;
   width: 30rem;
   margin-left: 5rem;
   margin-bottom: 2rem;
@@ -120,32 +122,23 @@ h2{
   margin-left: 1rem;
   margin-right: 1rem;
 }
-.sub-headings{
-  margin-top: 2rem;
-}
 .body{
-  margin-top: 2rem;
-  padding: 1rem;
+  padding: 2rem;
 }
 .body h4{
-  margin-top: 1rem;
-  padding: 2rem;
-  text-align: start;
-}
-.sub-headings h4{
   margin-top: 0rem;
+  padding: 1rem;
   text-align: start;
-  margin-left: 3rem;
 }
 .heading, .body h4{
   font-weight: 300;
 }
-.skill-sec {
+.skill-sec, .soft-sec {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.skill {
+.skill, .softSkill {
     margin: 5rem;
     height: 14rem;
 }
@@ -174,11 +167,19 @@ h2{
     height: 6rem;
     margin-top: 2rem;   
 }
-@media screen and (max-width: 391px) {
+.softSkill-card-body {
+    background-color: #ffd9002f;
+    border-radius: 0.4rem;
+    width: 10rem;
+    height: auto;
+    margin-top: 2rem;   
+}
+@media screen and (max-width: 390px) {
 h2{
   font-size: 1.5rem;
   padding: 0.4rem;
-  margin-left: 5rem;
+  margin-left: 0rem;
+  text-align: center
 }
 .container{
   grid-template-columns: repeat(1, 1fr);
@@ -190,31 +191,22 @@ h2{
   margin-left: 2.3rem;
 }
 .message{
-  height: 34rem;
+  height: 41rem;
   width: 20rem;
   margin-left: 2.3rem;
   margin-top: 2rem;
 }
 .message h5{
-  font-weight: 300;
-  text-align: start;
-  margin-top: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+padding: 1rem;
 }
 .body{
-  margin-top: -20rem;
+  margin-top: 0rem;
   padding: 2rem;
 }
 .body h4{
   margin-top: -1rem;
   padding: 1rem;
   text-align: start;
-}
-.sub-headings h4{
-  margin-top: 1rem;
-  text-align: start;
-  margin-left: 3rem;
 }
 .heading, .body h4{
   font-weight: 300;
@@ -246,30 +238,6 @@ h2{
   margin-left: 0rem;
   margin-top: 2rem;
 }
-.message h5{
-  font-weight: 300;
-  text-align: start;
-  margin-top: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-.body{
-  margin-top: -20rem;
-  padding: 2rem;
-}
-.body h4{
-  margin-top: -1rem;
-  padding: 1rem;
-  text-align: start;
-}
-.sub-headings h4{
-  margin-top: 1rem;
-  text-align: start;
-  margin-left: 3rem;
-}
-.heading, .body h4{
-  font-weight: 300;
-} 
 }
 
 </style>

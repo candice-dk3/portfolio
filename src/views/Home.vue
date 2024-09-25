@@ -7,7 +7,9 @@
             <div class="text-sec">
                 <h1>Candice Keet</h1>
                 <h2>Aspiring Front-End Developer</h2>
+                <a :href="resumeLink" target="_blank" >
                 <h3>Hire me</h3>
+                </a>
             </div>
         </div>
     </section>
@@ -16,7 +18,8 @@
 export default {
    data(){
     return{
-        image: ''
+        image: '',
+        resumeLink: ''
     }
    } 
 }
@@ -28,7 +31,7 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 0rem;
+    padding: 1.82rem;
 }
 .image{
     width: 52rem;
@@ -47,7 +50,7 @@ export default {
     color: white;
 }
 .image-sec{
-    background-color: #ffd90086;
+    background-color: #ffd90036;
     border: #FFD700 0.4rem solid;
     border-radius: 20rem;
     height: 24rem;
@@ -63,21 +66,22 @@ h3{
     border-radius: 2rem;
     margin-top: 1rem;
     font-weight: 300;
+    text-decoration: none;
 }
 @media screen and (max-width: 390px){
 .hero-sec{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    padding: 2rem;
+    padding: 0rem;
 }
 .image-sec{
-    background-color: #ffd90086;
-    border: #FFD700 0.4rem solid;
+    background-color: #ffd90036;
+    border: #ffd90054 0.4rem solid;
     border-radius: 20rem;
     height: 20rem;
     width: 20rem;
-    margin-left: 10rem;
-    margin-top: 2rem;
+    margin-left: 0rem;
+    margin-top: 0rem;
 }
 h3{
     width: 12rem;
@@ -96,7 +100,7 @@ h3{
     font-size: 1.4rem;
 }  
 }
-@media screen and (max-width: 768px){
+@media screen and (min-width: 391px) and (max-width: 768px){
 .hero-sec{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
