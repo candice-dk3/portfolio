@@ -7,7 +7,7 @@
             <div class="text-sec">
                 <h1>Candice Keet</h1>
                 <h2>Aspiring Front-End Developer</h2>
-                <a :href="resumeLink" target="_blank" >
+                <a :href="resumeLink" target="_blank" class="resume">
                 <h3>Hire me</h3>
                 </a>
             </div>
@@ -66,6 +66,9 @@ h3{
     border-radius: 2rem;
     margin-top: 1rem;
     font-weight: 300;
+    text-decoration: none;
+}
+.resume{
     text-decoration: none;
 }
 @media screen and (max-width: 390px){
