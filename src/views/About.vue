@@ -12,7 +12,7 @@
         </div>
         <div class="message">
           <div>
-            <h5>{{ about.message }}</h5>
+            <h4>{{ about.message }}</h4>
           </div>
         </div>
       </div>
@@ -96,31 +96,29 @@ h2{
 .container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* padding: 1rem; */
+
 }
 .details{
-  background-color: #ffd90066;
-  height: 32rem;
+  background-color: #ffd90036;
+  height: 33rem;
   width: 25rem;
   margin-left: 10rem;
   border-radius: 3rem;
   color: white;
 }
 .message{
-  background-color: #ffd90066;
-  height: 32rem;
+  background-color: #ffd90036;
+  height: 33rem;
   width: 30rem;
   margin-left: 5rem;
   margin-bottom: 2rem;
   border-radius: 3rem;
   color: white;
 }
-.message h5{
+.message h4{
+  padding: 1rem;
   font-weight: 300;
   text-align: start;
-  margin-top: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 .body{
   padding: 2rem;
@@ -183,7 +181,6 @@ h2{
 }
 .container{
   grid-template-columns: repeat(1, 1fr);
-  /* padding: 1rem; */
 }
 .details{
   height: 28rem;
@@ -196,7 +193,7 @@ h2{
   margin-left: 2.3rem;
   margin-top: 2rem;
 }
-.message h5{
+.message h4{
 padding: 1rem;
 }
 .body{
@@ -214,13 +211,6 @@ padding: 1rem;
 }
 
 @media screen and (min-width: 391px) and (max-width: 768px){
-  .inner-sec{
-    background-image: url(https://github.com/candice-dk3/portfolio-images/blob/main/About-Page.png?raw=true);
-    height: auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
 h2{
   font-size: 1.5rem;
   padding: 0.4rem;
