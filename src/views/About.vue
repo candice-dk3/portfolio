@@ -53,11 +53,6 @@
 </template>
 <script>
 export default {
-  data() {
-    return {
-      // about:"https://github.com/candice-dk3/vueProjectImages/blob/main/About-Page.png?raw=true",
-    };
-  },
   methods: {
     getAbout() {
       return this.$store.state.about;
