@@ -18,7 +18,7 @@
 export default {
    data(){
     return{
-        image: '',
+        image: 'https://github.com/candice-dk3/vueProjectImages/blob/main/20240422_114556.jpg?raw=true',
         resumeLink: ''
     }
    } 
@@ -27,14 +27,16 @@ export default {
 <style scoped>
 .inner-sec{
     background-image: url(https://github.com/candice-dk3/vueProjectImages/blob/main/Home-Page.png?raw=true);
-    height: auto;
+    height: 85vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     padding: 1.82rem;
 }
 .image{
-    width: 52rem;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
 }
 .hero-sec{
     display: grid;
@@ -53,8 +55,8 @@ export default {
     background-color: #ffd90036;
     border: #FFD700 0.4rem solid;
     border-radius: 20rem;
-    height: 24rem;
-    width: 24rem;
+    height: 25rem;
+    width: 25rem;
     margin-left: 14rem;
     margin-top: 3rem;
 }
@@ -85,6 +87,10 @@ h3{
     width: 20rem;
     margin-left: 0rem;
     margin-top: 0rem;
+}
+.image{
+    width: 20rem;
+    height: 20rem;
 }
 h3{
     width: 12rem;
