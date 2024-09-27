@@ -19,7 +19,7 @@ export default {
    data(){
     return{
         image: 'https://github.com/candice-dk3/vueProjectImages/blob/main/20240422_114556.jpg?raw=true',
-        resumeLink: ''
+        resumeLink: 'https://github.com/candice-dk3/portfolio-images/blob/main/Resume.png?raw=true'
     }
    } 
 }
