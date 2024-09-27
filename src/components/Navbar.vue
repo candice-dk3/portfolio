@@ -10,7 +10,7 @@
       <router-link to="/" @click="closeMenu">Home</router-link>
       <router-link to="/about" @click="closeMenu">About</router-link>
       <router-link to="/project" @click="closeMenu">Project</router-link>
-      <router-link to="/education" @click="closeMenu">Education</router-link>
+      <router-link to="/education" @click="closeMenu">Education & Experience</router-link>
       <router-link to="/contact" @click="closeMenu">Contact</router-link>
     </div>
   </nav>
