@@ -9,8 +9,8 @@
     <div :class="['s-sec', { 'mobile-menu': isMenuOpen }]">
       <router-link to="/" @click="closeMenu">Home</router-link>
       <router-link to="/about" @click="closeMenu">About</router-link>
-      <router-link to="/project" @click="closeMenu">Project</router-link>
       <router-link to="/education" @click="closeMenu">Education & Experience</router-link>
+      <router-link to="/project" @click="closeMenu">Project</router-link>
       <router-link to="/contact" @click="closeMenu">Contact</router-link>
     </div>
   </nav>
@@ -67,7 +67,7 @@ nav a.router-link-exact-active {
   gap: 2.5rem;
   transition: all 0.3s ease-in-out;
 }
-.s-sec a:nth-child(4) {
+.s-sec a:nth-child(3) {
   white-space: nowrap;
 }
 .homeLogo {

@@ -27,7 +27,7 @@ export default {
 <style scoped>
 .inner-sec{
     background-image: url(https://github.com/candice-dk3/vueProjectImages/blob/main/Home-Page.png?raw=true);
-    height: 85vh;
+    height: 75vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -50,6 +50,7 @@ export default {
     text-align: start;
     font-weight: 600;
     color: white;
+    font-size: 2rem;
 }
 .image-sec{
     background-color: #ffd90036;
@@ -58,7 +59,7 @@ export default {
     height: 25rem;
     width: 25rem;
     margin-left: 14rem;
-    margin-top: 3rem;
+    margin-top: 6rem;
 }
 h3{
     color: white;

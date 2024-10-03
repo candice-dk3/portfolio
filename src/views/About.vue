@@ -83,14 +83,11 @@ export default {
 h2{
   color: white;
   font-weight: 300;
-  font-size: 1.7rem;
-  text-align: start;
-  padding: 1rem;
-  margin-left: 9rem;
-}
-.technical-skills h2, .soft-skills h2 {
+  font-size: 2rem;
   text-align: center;
+  padding: 1rem;
 }
+
 .container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -98,25 +95,26 @@ h2{
 }
 .details{
   background-color: #ffd90036;
-  height: 33rem;
-  width: 25rem;
-  margin-left: 10rem;
+  height: 38rem;
+  width: 32rem;
+  margin-left: 18rem;
   border-radius: 3rem;
   color: white;
 }
 .message{
   background-color: #ffd90036;
-  height: 33rem;
-  width: 30rem;
+  height: 38rem;
+  width: 34rem;
   margin-left: 5rem;
   margin-bottom: 2rem;
   border-radius: 3rem;
   color: white;
 }
 .message h4{
-  padding: 1rem;
+  padding: 2em;
   font-weight: 300;
   text-align: start;
+  font-size: 1.1rem;
 }
 .body{
   padding: 2rem;
@@ -125,6 +123,7 @@ h2{
   margin-top: 0rem;
   padding: 1rem;
   text-align: start;
+  font-size: 1.2rem;
 }
 .heading, .body h4{
   font-weight: 300;
@@ -142,13 +141,13 @@ h2{
     background-color: #ffd9002f;
     border-radius: 50%;
     border: #ffd900 0.1rem solid;
-    width: 10rem;
-    height: 10rem;
+    width: 12rem;
+    height: 12rem;
 }
 .skill-image{
-    width: 7.5rem;
-    height: 7.5rem;
-    margin: 1.5rem auto;
+    width: 9rem;
+    height: 9rem;
+    margin: 1.9rem auto;
     display: block;
     filter: grayscale(100%);  
     transition: filter 0.6s;
@@ -193,6 +192,7 @@ h2{
 }
 .message h4{
 padding: 1rem;
+font-size: 1rem;
 }
 .body{
   margin-top: 0rem;
@@ -202,6 +202,7 @@ padding: 1rem;
   margin-top: -1rem;
   padding: 1rem;
   text-align: start;
+  font-size: 1rem;
 }
 .heading, .body h4{
   font-weight: 300;
@@ -225,6 +226,16 @@ h2{
   width: 22rem;
   margin-left: 0rem;
   margin-top: 2rem;
+}
+.message h4{
+  padding: 1rem;
+  font-size: 1rem;
+}
+.body h4{
+  margin-top: 0.7rem;
+  padding: 1.2rem;
+  text-align: start;
+  font-size: 1.1rem;
 }
 }
 
