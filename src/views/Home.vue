@@ -124,6 +124,10 @@ h3{
     margin-left: 12rem;
     margin-top: 2rem;
 }
+.image{
+    width: 20rem;
+    height: 20rem;
+}
 h3{
     width: 12rem;
     margin-top: 1rem;

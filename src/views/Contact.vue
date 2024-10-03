@@ -73,7 +73,8 @@ h1{
     grid-template-columns: repeat(2, 1fr);
     background-color: #ffd90038;
     border-radius: 4rem;
-    width: 60rem;
+    width: 68rem;
+    height: 32rem;
     padding: 1rem;
     margin: 0 auto;
     justify-self: center;
@@ -82,15 +83,15 @@ h1{
     justify-self: end;
 }
 form{
-    height: 22rem;
+    height: 24rem;
     padding: 1rem;
 }
 input{
     background-color: transparent;
     border: none;
     background-color: #ffd90038;
-    height: 2rem;
-    width: 25rem;
+    height: 2.4rem;
+    width: 28rem;
     border-radius: 1.5rem;
     margin-bottom: 1rem;
     outline: none; 
@@ -98,8 +99,8 @@ input{
 textarea{
     background-color: #ffd90038;
     border: none;
-    width: 25rem;
-    height: 9rem;
+    width: 28rem;
+    height: 14rem;
     border-radius: 1.5rem;
     outline: none; 
 }
@@ -167,6 +168,7 @@ h1{
     grid-template-columns: repeat(1, 1fr);
     width: 19rem;
     padding: 1rem;
+    height: 35rem;
 }
 .form-sec {
     justify-self: start;
@@ -221,6 +223,7 @@ h1{
 }
 .contact{
     width: 40rem;
+    height: 23rem;
 }
 .form-sec {
     justify-self: start;
