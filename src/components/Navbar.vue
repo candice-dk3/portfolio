@@ -62,8 +62,11 @@ nav a.router-link-exact-active {
 
 .s-sec {
   display: flex;
-  gap: 1.5rem;
+  gap: 2.5rem;
   transition: all 0.3s ease-in-out;
+}
+.s-sec a:nth-child(4) {
+  white-space: nowrap;
 }
 .homeLogo {
   font-size: 1.5rem;

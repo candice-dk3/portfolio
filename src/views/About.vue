@@ -88,6 +88,9 @@ h2{
   padding: 1rem;
   margin-left: 9rem;
 }
+.technical-skills h2, .soft-skills h2 {
+  text-align: center;
+}
 .container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
