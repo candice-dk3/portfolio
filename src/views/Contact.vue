@@ -57,7 +57,7 @@ export default {
 <style scoped>
 .inner-sec{
     background-image: url(https://github.com/candice-dk3/portfolio-images/blob/main/Contact-Page.png?raw=true);
-    height: auto;
+    height: 71.6vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -157,6 +157,7 @@ button:hover {
 @media screen and (max-width: 390px){
 .inner-sec{
     padding: 1rem;
+    height: auto
 }
 h1{
     font-size: 1.4rem;
@@ -212,6 +213,7 @@ button {
 @media screen and (min-width: 391px) and (max-width: 768px){
 .inner-sec{
     padding: 1rem;
+    height: auto
 }
 h1{
     font-size: 1.2rem;

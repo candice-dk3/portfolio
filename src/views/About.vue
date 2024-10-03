@@ -186,7 +186,7 @@ h2{
   margin-left: 2.3rem;
 }
 .message{
-  height: 41rem;
+  height: 48rem;
   width: 20rem;
   margin-left: 2.3rem;
   margin-top: 2rem;
@@ -215,13 +215,13 @@ h2{
   margin-left: 5rem;
 }
 .details{
-  height: 34rem;
+  height: 43rem;
   width: 20rem;
   margin-left: 2rem;
   margin-top: 2rem;
 }
 .message{
-  height: 34rem;
+  height: 43rem;
   width: 22rem;
   margin-left: 0rem;
   margin-top: 2rem;
