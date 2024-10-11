@@ -87,7 +87,9 @@ h2{
   text-align: center;
   padding: 1rem;
 }
-
+.soft-skills h2{
+  padding: 0rem;
+}
 .container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -135,7 +137,7 @@ h2{
 }
 .skill, .softSkill {
     margin: 5rem;
-    height: 14rem;
+    /* height: 14rem; */
 }
 .imgUrl{
     background-color: #ffd9002f;
