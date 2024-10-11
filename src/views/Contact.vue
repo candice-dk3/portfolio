@@ -155,6 +155,11 @@ button:hover {
 .image:hover{
     transform: scale(1.2); 
 }
+h4{
+    color: white;
+    font-weight: 400;
+    margin-left: 1rem;
+}
 @media screen and (max-width: 390px){
 .inner-sec{
     padding: 1rem;

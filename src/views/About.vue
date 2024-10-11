@@ -157,17 +157,26 @@ h2{
 }
 .skill-card-body {
     background-color: #ffd9002f;
+    color: white;
     border-radius: 1rem;
     width: 10rem;
     height: 6rem;
-    margin-top: 2rem;   
+    margin-top: 2rem; 
+    margin-left: 1rem;  
 }
 .softSkill-card-body {
     background-color: #ffd9002f;
+    color: white;
     border-radius: 0.4rem;
     width: 10rem;
-    height: auto;
+    height: 3rem;
     margin-top: 2rem;   
+    margin-left: 1rem;  
+}
+.skill-card-title, .skill-card-p{
+  font-size: 1rem;
+  padding: 0.1rem;
+  font-weight: 200;
 }
 @media screen and (max-width: 390px) {
 h2{
