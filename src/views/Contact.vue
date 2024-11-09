@@ -57,24 +57,25 @@ export default {
 <style scoped>
 .inner-sec{
     background-image: url(https://github.com/candice-dk3/portfolio-images/blob/main/Contact-Page.png?raw=true);
-    height: 71.6vh;
+    height: 80vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 2.82rem;
+    padding: 1rem;
 }
 h1{
     color: white;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 200;
+    padding: 0rem;
 }
 .contact{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: #ffd90038;
     border-radius: 4rem;
-    width: 68rem;
-    height: 32rem;
+    width: 60%;
+    height: 82%;
     padding: 1rem;
     margin: 0 auto;
     justify-self: center;
@@ -83,7 +84,7 @@ h1{
     justify-self: end;
 }
 form{
-    height: 24rem;
+    height: 50%;
     padding: 1rem;
 }
 input{
@@ -91,15 +92,15 @@ input{
     border: none;
     background-color: #ffd90038;
     height: 2.4rem;
-    width: 28rem;
+    width: 100%;
     border-radius: 1.5rem;
     margin-bottom: 1rem;
-    outline: none; 
+    outline: none;
 }
 textarea{
     background-color: #ffd90038;
     border: none;
-    width: 28rem;
+    width: 100%;
     height: 14rem;
     border-radius: 1.5rem;
     outline: none; 
